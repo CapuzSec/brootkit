@@ -13,7 +13,7 @@ function br_check_privilege()
 function br_set_rootkit_path()
 {
         if [ $br_privilege -eq 1 ]; then
-                BR_ROOTKIT_PATH="/home/$USER/..."
+                BR_ROOTKIT_PATH="$(pwd)/"
         else
                 echo "uninstall brootkit using root privilege."
         fi

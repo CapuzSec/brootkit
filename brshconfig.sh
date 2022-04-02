@@ -42,5 +42,5 @@ br_display_config()
 	echo $br_sleep_time
 }
 
-br_load_config "/home/$USER/.../brsh.conf"
+br_load_config "$(pwd)//brsh.conf"
 #br_display_config

